@@ -1,0 +1,9 @@
+com.lambdaschool.medcabinet
+com.lambdaschool.medcabinet.config
+com.lambdaschool.medcabinet.controllers
+com.lambdaschool.medcabinet.exceptions
+com.lambdaschool.medcabinet.handlers
+com.lambdaschool.medcabinet.models
+com.lambdaschool.medcabinet.repository
+com.lambdaschool.medcabinet.services
+com.lambdaschool.medcabinet.views
