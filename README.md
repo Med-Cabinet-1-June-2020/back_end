@@ -5,12 +5,26 @@ Authenticating with OAUTH2
 --------------------------
 
 Authenticating with OAUTH2 is similar to JWT as both return a token upon success.
-The main difference is the header. 
+The main difference is the header and url path. 
 
-Example header:
-`
+Existing users
+`admin/password`,
+`cinnamon/1234567`
 
-`
+
+Example Request:
+```
+axios.post('https://medcabinetjune2020.herokuapp.com/login', 
+    `grant_type=password&username=${this.state.username}&password=${this.state.password}`, 
+    {
+        headers: {
+            // btoa is converting our client id/client secret into base64
+            Authorization: `Basic ${btoa('lambda-client:lambda-secret')}`,
+            'Content-Type': 'application/x-www-form-urlencoded'
+        }
+    }
+)
+```
 
 
 Creating a new user
@@ -37,4 +51,5 @@ Logs the new user in on success and returns the token:
 ```
 
 and the Location Header of the new user
-`Location Header: localhost:2019/users/user/62`
+
+`Location Header: https://medcabinetjune2020.herokuapp.com/users/user/62`
