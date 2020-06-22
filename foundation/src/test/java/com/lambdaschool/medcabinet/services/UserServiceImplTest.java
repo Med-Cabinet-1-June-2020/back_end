@@ -2,9 +2,7 @@ package com.lambdaschool.medcabinet.services;
 
 import com.lambdaschool.medcabinet.FoundationApplication;
 import com.lambdaschool.medcabinet.exceptions.ResourceNotFoundException;
-import com.lambdaschool.medcabinet.models.Role;
 import com.lambdaschool.medcabinet.models.User;
-import com.lambdaschool.medcabinet.models.UserRoles;
 import com.lambdaschool.medcabinet.models.Useremail;
 import org.junit.After;
 import org.junit.Before;
@@ -105,8 +103,8 @@ public class UserServiceImplTest
     @Test
     public void F_save()
     {
-        ArrayList<UserRoles> datas = new ArrayList<>();
-        User u2 = new User("tiger", "ILuvMath!", "tiger@school.lambda", datas);
+
+        User u2 = new User("tiger", "ILuvMath!", "tiger@school.lambda");
         u2.getUseremails()
                 .add(new Useremail(u2, "tiger@tiger.local"));
 
@@ -126,8 +124,8 @@ public class UserServiceImplTest
     @Test
     public void G_update()
     {
-        ArrayList<UserRoles> datas = new ArrayList<>();
-        User u2 = new User("cinnamon", "password", "cinnamon@school.lambda", datas);
+
+        User u2 = new User("cinnamon", "password", "cinnamon@school.lambda");
         u2.getUseremails()
                 .add(new Useremail(u2, "cinnamon@mymail.thump"));
         u2.getUseremails()
@@ -153,10 +151,10 @@ public class UserServiceImplTest
     @Test(expected = ResourceNotFoundException.class)
     public void GB_updateNotCurrentUserNorAdmin()
     {
-        Role r2 = new Role("user");
 
-        ArrayList<UserRoles> datas = new ArrayList<>();
-        User u2 = new User("cinnamon", "password", "cinnamon@school.lambda", datas);
+
+
+        User u2 = new User("cinnamon", "password", "cinnamon@school.lambda");
         u2.getUseremails()
                 .add(new Useremail(u2, "cinnamon@mymail.thump"));
         u2.getUseremails()
@@ -175,29 +173,5 @@ public class UserServiceImplTest
         assertEquals("bunny@email.thump", updatedu2.getUseremails()
                 .get(checking)
                 .getUseremail());
-    }
-
-    @Test(expected = ResourceNotFoundException.class)
-    public void HA_deleteUserRoleRoleNotFound()
-    {
-        userService.deleteUserRole(7, 50);
-    }
-
-    @Test(expected = ResourceNotFoundException.class)
-    public void HB_deleteUserRoleUserNotFound()
-    {
-        userService.deleteUserRole(50, 2);
-    }
-
-    @Test(expected = ResourceNotFoundException.class)
-    public void IC_addUserRoleRoleNotFound()
-    {
-        userService.addUserRole(7, 50);
-    }
-
-    @Test(expected = ResourceNotFoundException.class)
-    public void ID_addUserRoleUserNotFound()
-    {
-        userService.addUserRole(50, 2);
     }
 }

@@ -95,18 +95,6 @@ public class User
     private List<Useremail> useremails = new ArrayList<>();
 
     /**
-     * Part of the join relationship between user and role
-     * connects users to the user role combination
-     */
-    @ApiModelProperty(name = "roles",
-            value = "List of user roles for this users")
-    @OneToMany(mappedBy = "user",
-            cascade = CascadeType.ALL)
-    @JsonIgnoreProperties(value = "user",
-            allowSetters = true)
-    private List<UserRoles> roles = new ArrayList<>();
-
-    /**
      * Default constructor used primarily by the JPA.
      */
     public User()
@@ -121,22 +109,15 @@ public class User
      * @param username     The username (String) of the user
      * @param password     The password (String) of the user
      * @param primaryemail The primary email (String) of the user
-     * @param userRoles    The list of roles (userroles) assigned to this user
      */
     public User(
             String username,
             String password,
-            String primaryemail,
-            List<UserRoles> userRoles)
+            String primaryemail)
     {
         setUsername(username);
         setPassword(password);
         setPrimaryemail(primaryemail);
-        for (UserRoles ur : userRoles)
-        {
-            ur.setUser(this);
-        }
-        this.roles = userRoles;
     }
 
     /**
@@ -261,37 +242,6 @@ public class User
     }
 
     /**
-     * Getter for user role combinations
-     *
-     * @return A list of user role combinations associated with this user
-     */
-    public List<UserRoles> getRoles()
-    {
-        return roles;
-    }
-
-    /**
-     * Setter for user role combinations
-     *
-     * @param roles Change the list of user role combinations associated with this user to this one
-     */
-    public void setRoles(List<UserRoles> roles)
-    {
-        this.roles = roles;
-    }
-
-    /**
-     * Add one role to this user
-     *
-     * @param role the new role (Role) to add
-     */
-    public void addRole(Role role)
-    {
-        roles.add(new UserRoles(this,
-                                role));
-    }
-
-    /**
      * Internally, user security requires a list of authorities, roles, that the user has. This method is a simple way to provide those.
      * Note that SimpleGrantedAuthority requests the format ROLE_role name all in capital letters!
      *
@@ -301,15 +251,6 @@ public class User
     public List<SimpleGrantedAuthority> getAuthority()
     {
         List<SimpleGrantedAuthority> rtnList = new ArrayList<>();
-
-        for (UserRoles r : this.roles)
-        {
-            String myRole = "ROLE_" + r.getRole()
-                    .getName()
-                    .toUpperCase();
-            rtnList.add(new SimpleGrantedAuthority(myRole));
-        }
-
         return rtnList;
     }
 }

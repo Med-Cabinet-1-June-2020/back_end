@@ -1,9 +1,7 @@
 package com.lambdaschool.medcabinet.controllers;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.lambdaschool.medcabinet.models.Role;
 import com.lambdaschool.medcabinet.models.User;
-import com.lambdaschool.medcabinet.models.UserRoles;
 import com.lambdaschool.medcabinet.models.Useremail;
 import com.lambdaschool.medcabinet.services.UserService;
 import io.restassured.module.mockmvc.RestAssuredMockMvc;
@@ -60,19 +58,7 @@ public class UserControllerUnitTest
     {
         userList = new ArrayList<>();
 
-        Role r1 = new Role("admin");
-        r1.setRoleid(1);
-        Role r2 = new Role("user");
-        r2.setRoleid(2);
-        Role r3 = new Role("data");
-        r3.setRoleid(3);
-
-        // admin, data, user
-        ArrayList<UserRoles> admins = new ArrayList<>();
-        admins.add(new UserRoles(new User(), r1));
-        admins.add(new UserRoles(new User(), r2));
-        admins.add(new UserRoles(new User(), r3));
-        User u1 = new User("admin", "ILuvM4th!", "admin@lambdaschool.local", admins);
+        User u1 = new User("admin", "ILuvM4th!", "admin@lambdaschool.local");
 
         u1.getUseremails()
                 .add(new Useremail(u1, "admin@email.local"));
@@ -89,11 +75,7 @@ public class UserControllerUnitTest
         u1.setUserid(101);
         userList.add(u1);
 
-        // data, user
-        ArrayList<UserRoles> datas = new ArrayList<>();
-        datas.add(new UserRoles(new User(), r3));
-        datas.add(new UserRoles(new User(), r2));
-        User u2 = new User("cinnamon", "1234567", "cinnamon@lambdaschool.local", datas);
+        User u2 = new User("cinnamon", "1234567", "cinnamon@lambdaschool.local");
 
         u2.getUseremails()
                 .add(new Useremail(u2, "cinnamon@mymail.local"));
@@ -116,10 +98,8 @@ public class UserControllerUnitTest
         u2.setUserid(102);
         userList.add(u2);
 
-        // user
-        ArrayList<UserRoles> users = new ArrayList<>();
-        users.add(new UserRoles(new User(), r1));
-        User u3 = new User("testingbarn", "ILuvM4th!", "testingbarn@school.lambda", users);
+
+        User u3 = new User("testingbarn", "ILuvM4th!", "testingbarn@school.lambda");
 
         u3.getUseremails()
                 .add(new Useremail(u3, "barnbarn@email.local"));
@@ -130,15 +110,12 @@ public class UserControllerUnitTest
         u3.setUserid(103);
         userList.add(u3);
 
-        users = new ArrayList<>();
-        users.add(new UserRoles(new User(), r2));
-        User u4 = new User("testingcat", "password", "testingcat@school.lambda", users);
+
+        User u4 = new User("testingcat", "password", "testingcat@school.lambda");
         u4.setUserid(104);
         userList.add(u4);
 
-        users = new ArrayList<>();
-        users.add(new UserRoles(new User(), r2));
-        User u5 = new User("testingdog", "password", "testingdog@school.lambda", users);
+        User u5 = new User("testingdog", "password", "testingdog@school.lambda");
         u5.setUserid(105);
         userList.add(u5);
 
@@ -370,14 +347,12 @@ public class UserControllerUnitTest
         String apiUrl = "/users/user";
 
         // build a user
-        ArrayList<UserRoles> thisRole = new ArrayList<>();
         ArrayList<Useremail> thisEmail = new ArrayList<>();
         User u1 = new User();
         u1.setUserid(100);
         u1.setUsername("tiger");
         u1.setPassword("ILuvM4th!");
         u1.setPrimaryemail("tiger@home.local");
-        u1.setRoles(thisRole);
         ;
         u1.setUseremails(thisEmail);
 
@@ -435,34 +410,6 @@ public class UserControllerUnitTest
         RequestBuilder rb = MockMvcRequestBuilders.delete(apiUrl, "3")
                 .contentType(MediaType.APPLICATION_JSON)
                 .accept(MediaType.APPLICATION_JSON);
-        mockMvc.perform(rb)
-                .andExpect(status().is2xxSuccessful())
-                .andDo(MockMvcResultHandlers.print());
-    }
-
-    @Test
-    public void deleteUserRoleByIds() throws
-            Exception
-    {
-        String apiUrl = "/users/user/{userid}/role/{roleid}";
-
-        RequestBuilder rb = MockMvcRequestBuilders.delete(apiUrl, 3, 2);
-
-        mockMvc.perform(rb)
-                .andExpect(status().is2xxSuccessful())
-                .andDo(MockMvcResultHandlers.print());
-    }
-
-    // @PostMapping("/user/{userid}/role/{roleid}")
-    // userService.addUserRole(userid, roleid);
-    @Test
-    public void postUserRoleByIds() throws
-            Exception
-    {
-        String apiUrl = "/users/user/{userid}/role/{roleid}";
-
-        RequestBuilder rb = MockMvcRequestBuilders.post(apiUrl, 3, 2);
-
         mockMvc.perform(rb)
                 .andExpect(status().is2xxSuccessful())
                 .andDo(MockMvcResultHandlers.print());

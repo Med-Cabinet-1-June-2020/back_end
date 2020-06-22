@@ -52,7 +52,6 @@ public class UserController
     @ApiOperation(value = "returns all Users",
             response = User.class,
             responseContainer = "List")
-    @PreAuthorize("hasAnyRole('ADMIN')")
     @GetMapping(value = "/users",
             produces = {"application/json"})
     public ResponseEntity<?> listAllUsers()
@@ -77,7 +76,6 @@ public class UserController
             response = User.class), @ApiResponse(code = 404,
             message = "User Not Found",
             response = ErrorDetail.class)})
-    @PreAuthorize("hasAnyRole('ADMIN')")
     @GetMapping(value = "/user/{userId}",
             produces = {"application/json"})
     public ResponseEntity<?> getUserById(
@@ -107,7 +105,6 @@ public class UserController
             response = User.class), @ApiResponse(code = 404,
             message = "User Not Found",
             response = ErrorDetail.class)})
-    @PreAuthorize("hasAnyRole('ADMIN')")
     @GetMapping(value = "/user/name/{userName}",
             produces = {"application/json"})
     public ResponseEntity<?> getUserByName(
@@ -136,7 +133,6 @@ public class UserController
     @ApiParam(value = "User Name Substring",
             required = true,
             example = "john")
-    @PreAuthorize("hasAnyRole('ADMIN')")
     @GetMapping(value = "/user/name/like/{userName}",
             produces = {"application/json"})
     public ResponseEntity<?> getUserLikeName(
@@ -291,73 +287,6 @@ public class UserController
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    /**
-     * Deletes the given user, user role combination
-     * <br>Example: <a href="http://localhost:2019/users/user/7/role/2">http://localhost:2019/users/user/7/role/2</a>
-     *
-     * @param userid the user id of the user of the user role combination
-     * @param roleid the role id of the user of the user user role combination
-     * @return Status OK
-     */
-    @ApiOperation(value = "Deletes the given user",
-            response = Void.class)
-    @ApiResponses(value = {@ApiResponse(code = 200,
-            message = "User Found",
-            response = User.class), @ApiResponse(code = 404,
-            message = "User Not Found",
-            response = ErrorDetail.class)})
-    @DeleteMapping(value = "/user/{userid}/role/{roleid}")
-    public ResponseEntity<?> deleteUserRoleByIds(
-            @ApiParam(value = "userid",
-                    required = true,
-                    example = "4")
-            @PathVariable
-                    long userid,
-            @ApiParam(value = "roleid",
-                    required = true,
-                    example = "4")
-            @PathVariable
-                    long roleid)
-    {
-        userService.deleteUserRole(userid,
-                                   roleid);
-
-        return new ResponseEntity<>(HttpStatus.OK);
-    }
-
-    /**
-     * Adds the given user, user role combination
-     * <br>Example: <a href="http://localhost:2019/users/user/7/role/2">http://localhost:2019/users/user/7/role/2</a>
-     *
-     * @param userid the user id of the user user role combination
-     * @param roleid the role id of the user user role combination
-     * @return Status OK
-     */
-    @ApiOperation(value = "Adds a given user role to the given user",
-            response = Void.class)
-    @ApiResponses(value = {@ApiResponse(code = 200,
-            message = "User And Role Found",
-            response = Void.class), @ApiResponse(code = 404,
-            message = "User and / or Role Not Found",
-            response = ErrorDetail.class)})
-    @PostMapping(value = "/user/{userid}/role/{roleid}")
-    public ResponseEntity<?> postUserRoleByIds(
-            @ApiParam(value = "userid",
-                    required = true,
-                    example = "4")
-            @PathVariable
-                    long userid,
-            @ApiParam(value = "roleid",
-                    required = true,
-                    example = "4")
-            @PathVariable
-                    long roleid)
-    {
-        userService.addUserRole(userid,
-                                roleid);
-
-        return new ResponseEntity<>(HttpStatus.CREATED);
-    }
 
     /**
      * Returns the User record for the currently authenticated user based off of the supplied access token

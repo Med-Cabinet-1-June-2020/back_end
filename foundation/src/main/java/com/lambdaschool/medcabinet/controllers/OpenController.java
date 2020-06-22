@@ -2,8 +2,6 @@ package com.lambdaschool.medcabinet.controllers;
 
 import com.lambdaschool.medcabinet.models.User;
 import com.lambdaschool.medcabinet.models.UserMinimum;
-import com.lambdaschool.medcabinet.models.UserRoles;
-import com.lambdaschool.medcabinet.services.RoleService;
 import com.lambdaschool.medcabinet.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
@@ -44,8 +42,6 @@ public class OpenController
     /**
      * A method in this controller adds a new user to the application with the role User so needs access to Role Services to do this.
      */
-    @Autowired
-    private RoleService roleService;
 
     /**
      * This endpoint always anyone to create an account with the default role of USER. That role is hardcoded in this method.
@@ -72,12 +68,6 @@ public class OpenController
         newuser.setUsername(newminuser.getUsername());
         newuser.setPassword(newminuser.getPassword());
         newuser.setPrimaryemail(newminuser.getPrimaryemail());
-
-        // add the default role of user
-        List<UserRoles> newRoles = new ArrayList<>();
-        newRoles.add(new UserRoles(newuser,
-                                   roleService.findByName("user")));
-        newuser.setRoles(newRoles);
 
         newuser = userService.save(newuser);
 

@@ -75,23 +75,4 @@ public interface UserService
             User user,
             long id);
 
-    /**
-     * Deletes a given user role combination
-     *
-     * @param userid The user id of the user part of this user role combination
-     * @param roleid The role id of the role part of this user role combination
-     */
-    void deleteUserRole(
-            long userid,
-            long roleid);
-
-    /**
-     * Adds a given user role combination
-     *
-     * @param userid The user id of the user part of this user role combination
-     * @param roleid The role id of the role part of this user role combination
-     */
-    void addUserRole(
-            long userid,
-            long roleid);
 }
