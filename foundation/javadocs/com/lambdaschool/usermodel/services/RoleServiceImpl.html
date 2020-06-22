@@ -115,7 +115,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <!-- ======== START OF CLASS DATA ======== -->
 <main role="main">
 <div class="header">
-<div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">com.lambdaschool.foundation.services</a></div>
+<div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">com.lambdaschool.medcabinet.services</a></div>
 <h2 title="Class RoleServiceImpl" class="title">Class RoleServiceImpl</h2>
 </div>
 <div class="contentContainer">
@@ -123,7 +123,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li>java.lang.Object</li>
 <li>
 <ul class="inheritance">
-<li>com.lambdaschool.foundation.services.RoleServiceImpl</li>
+<li>com.lambdaschool.medcabinet.services.RoleServiceImpl</li>
 </ul>
 </li>
 </ul>
@@ -132,14 +132,14 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="RoleService.html" title="interface in com.lambdaschool.foundation.services">RoleService</a></code></dd>
+<dd><code><a href="RoleService.html" title="interface in com.lambdaschool.medcabinet.services">RoleService</a></code></dd>
 </dl>
 <hr>
 <pre>@Transactional
 @Service("roleService")
 public class <span class="typeNameLabel">RoleServiceImpl</span>
 extends java.lang.Object
-implements <a href="RoleService.html" title="interface in com.lambdaschool.foundation.services">RoleService</a></pre>
+implements <a href="RoleService.html" title="interface in com.lambdaschool.medcabinet.services">RoleService</a></pre>
 <div class="block">Implements the RoleService Interface</div>
 </li>
 </ul>
@@ -190,37 +190,37 @@ implements <a href="RoleService.html" title="interface in com.lambdaschool.found
 </td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code>java.util.List&lt;<a href="../models/Role.html" title="class in com.lambdaschool.foundation.models">Role</a>&gt;</code></td>
+<td class="colFirst"><code>java.util.List&lt;<a href="../models/Role.html" title="class in com.lambdaschool.medcabinet.models">Role</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#findAll()">findAll</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns a list of all Role objects</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
-<td class="colFirst"><code><a href="../models/Role.html" title="class in com.lambdaschool.foundation.models">Role</a></code></td>
+<td class="colFirst"><code><a href="../models/Role.html" title="class in com.lambdaschool.medcabinet.models">Role</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#findByName(java.lang.String)">findByName</a></span>&#8203;(java.lang.String&nbsp;name)</code></th>
 <td class="colLast">
 <div class="block">Find the first Role object matching the given name</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
-<td class="colFirst"><code><a href="../models/Role.html" title="class in com.lambdaschool.foundation.models">Role</a></code></td>
+<td class="colFirst"><code><a href="../models/Role.html" title="class in com.lambdaschool.medcabinet.models">Role</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#findRoleById(long)">findRoleById</a></span>&#8203;(long&nbsp;id)</code></th>
 <td class="colLast">
 <div class="block">Return the first Role matching the given primary key</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
-<td class="colFirst"><code><a href="../models/Role.html" title="class in com.lambdaschool.foundation.models">Role</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#save(com.lambdaschool.usermodel.models.Role)">save</a></span>&#8203;(<a href="../models/Role.html" title="class in com.lambdaschool.foundation.models">Role</a>&nbsp;role)</code></th>
+<td class="colFirst"><code><a href="../models/Role.html" title="class in com.lambdaschool.medcabinet.models">Role</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#save(com.lambdaschool.usermodel.models.Role)">save</a></span>&#8203;(<a href="../models/Role.html" title="class in com.lambdaschool.medcabinet.models">Role</a>&nbsp;role)</code></th>
 <td class="colLast">
 <div class="block">Given a complete Role object, saved that Role object in the database.</div>
 </td>
 </tr>
 <tr id="i5" class="rowColor">
-<td class="colFirst"><code><a href="../models/Role.html" title="class in com.lambdaschool.foundation.models">Role</a></code></td>
+<td class="colFirst"><code><a href="../models/Role.html" title="class in com.lambdaschool.medcabinet.models">Role</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#update(long,com.lambdaschool.usermodel.models.Role)">update</a></span>&#8203;(long&nbsp;id,
-      <a href="../models/Role.html" title="class in com.lambdaschool.foundation.models">Role</a>&nbsp;role)</code></th>
+      <a href="../models/Role.html" title="class in com.lambdaschool.medcabinet.models">Role</a>&nbsp;role)</code></th>
 <td class="colLast">
 <div class="block">Updates the name of the given role</div>
 </td>
@@ -274,12 +274,12 @@ implements <a href="RoleService.html" title="interface in com.lambdaschool.found
 <ul class="blockList">
 <li class="blockList">
 <h4>findAll</h4>
-<pre class="methodSignature">public&nbsp;java.util.List&lt;<a href="../models/Role.html" title="class in com.lambdaschool.foundation.models">Role</a>&gt;&nbsp;findAll()</pre>
+<pre class="methodSignature">public&nbsp;java.util.List&lt;<a href="../models/Role.html" title="class in com.lambdaschool.medcabinet.models">Role</a>&gt;&nbsp;findAll()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="RoleService.html#findAll()">RoleService</a></code></span></div>
 <div class="block">Returns a list of all Role objects</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="RoleService.html#findAll()">findAll</a></code>&nbsp;in interface&nbsp;<code><a href="RoleService.html" title="interface in com.lambdaschool.foundation.services">RoleService</a></code></dd>
+<dd><code><a href="RoleService.html#findAll()">findAll</a></code>&nbsp;in interface&nbsp;<code><a href="RoleService.html" title="interface in com.lambdaschool.medcabinet.services">RoleService</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>list of all Role object</dd>
 </dl>
@@ -291,12 +291,12 @@ implements <a href="RoleService.html" title="interface in com.lambdaschool.found
 <ul class="blockList">
 <li class="blockList">
 <h4>findRoleById</h4>
-<pre class="methodSignature">public&nbsp;<a href="../models/Role.html" title="class in com.lambdaschool.foundation.models">Role</a>&nbsp;findRoleById&#8203;(long&nbsp;id)</pre>
+<pre class="methodSignature">public&nbsp;<a href="../models/Role.html" title="class in com.lambdaschool.medcabinet.models">Role</a>&nbsp;findRoleById&#8203;(long&nbsp;id)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="RoleService.html#findRoleById(long)">RoleService</a></code></span></div>
 <div class="block">Return the first Role matching the given primary key</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="RoleService.html#findRoleById(long)">findRoleById</a></code>&nbsp;in interface&nbsp;<code><a href="RoleService.html" title="interface in com.lambdaschool.foundation.services">RoleService</a></code></dd>
+<dd><code><a href="RoleService.html#findRoleById(long)">findRoleById</a></code>&nbsp;in interface&nbsp;<code><a href="RoleService.html" title="interface in com.lambdaschool.medcabinet.services">RoleService</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>id</code> - The primary key (long) of the Role you seek</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -310,12 +310,12 @@ implements <a href="RoleService.html" title="interface in com.lambdaschool.found
 <ul class="blockList">
 <li class="blockList">
 <h4>findByName</h4>
-<pre class="methodSignature">public&nbsp;<a href="../models/Role.html" title="class in com.lambdaschool.foundation.models">Role</a>&nbsp;findByName&#8203;(java.lang.String&nbsp;name)</pre>
+<pre class="methodSignature">public&nbsp;<a href="../models/Role.html" title="class in com.lambdaschool.medcabinet.models">Role</a>&nbsp;findByName&#8203;(java.lang.String&nbsp;name)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="RoleService.html#findByName(java.lang.String)">RoleService</a></code></span></div>
 <div class="block">Find the first Role object matching the given name</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="RoleService.html#findByName(java.lang.String)">findByName</a></code>&nbsp;in interface&nbsp;<code><a href="RoleService.html" title="interface in com.lambdaschool.foundation.services">RoleService</a></code></dd>
+<dd><code><a href="RoleService.html#findByName(java.lang.String)">findByName</a></code>&nbsp;in interface&nbsp;<code><a href="RoleService.html" title="interface in com.lambdaschool.medcabinet.services">RoleService</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>name</code> - The name (String) of the role you seek</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -330,7 +330,7 @@ implements <a href="RoleService.html" title="interface in com.lambdaschool.found
 <li class="blockList">
 <h4>save</h4>
 <pre class="methodSignature">@Transactional
-public&nbsp;<a href="../models/Role.html" title="class in com.lambdaschool.foundation.models">Role</a>&nbsp;save&#8203;(<a href="../models/Role.html" title="class in com.lambdaschool.foundation.models">Role</a>&nbsp;role)</pre>
+public&nbsp;<a href="../models/Role.html" title="class in com.lambdaschool.medcabinet.models">Role</a>&nbsp;save&#8203;(<a href="../models/Role.html" title="class in com.lambdaschool.medcabinet.models">Role</a>&nbsp;role)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="RoleService.html#save(com.lambdaschool.usermodel.models.Role)">RoleService</a></code></span></div>
 <div class="block">Given a complete Role object, saved that Role object in the database.
  If a primary key is provided, the record is completely replaced
@@ -339,7 +339,7 @@ public&nbsp;<a href="../models/Role.html" title="class in com.lambdaschool.found
  Note that Users are not added to Roles through this process</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="RoleService.html#save(com.lambdaschool.usermodel.models.Role)">save</a></code>&nbsp;in interface&nbsp;<code><a href="RoleService.html" title="interface in com.lambdaschool.foundation.services">RoleService</a></code></dd>
+<dd><code><a href="RoleService.html#save(com.lambdaschool.usermodel.models.Role)">save</a></code>&nbsp;in interface&nbsp;<code><a href="RoleService.html" title="interface in com.lambdaschool.medcabinet.services">RoleService</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>role</code> - the role object to be saved</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -359,7 +359,7 @@ public&nbsp;void&nbsp;delete&#8203;(long&nbsp;id)</pre>
 <div class="block">Deletes a given role and associated user role combinations</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="RoleService.html#delete(long)">delete</a></code>&nbsp;in interface&nbsp;<code><a href="RoleService.html" title="interface in com.lambdaschool.foundation.services">RoleService</a></code></dd>
+<dd><code><a href="RoleService.html#delete(long)">delete</a></code>&nbsp;in interface&nbsp;<code><a href="RoleService.html" title="interface in com.lambdaschool.medcabinet.services">RoleService</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>id</code> - The role id of the role to delete</dd>
 </dl>
@@ -372,13 +372,13 @@ public&nbsp;void&nbsp;delete&#8203;(long&nbsp;id)</pre>
 <li class="blockList">
 <h4>update</h4>
 <pre class="methodSignature">@Transactional
-public&nbsp;<a href="../models/Role.html" title="class in com.lambdaschool.foundation.models">Role</a>&nbsp;update&#8203;(long&nbsp;id,
-                   <a href="../models/Role.html" title="class in com.lambdaschool.foundation.models">Role</a>&nbsp;role)</pre>
+public&nbsp;<a href="../models/Role.html" title="class in com.lambdaschool.medcabinet.models">Role</a>&nbsp;update&#8203;(long&nbsp;id,
+                   <a href="../models/Role.html" title="class in com.lambdaschool.medcabinet.models">Role</a>&nbsp;role)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="RoleService.html#update(long,com.lambdaschool.usermodel.models.Role)">RoleService</a></code></span></div>
 <div class="block">Updates the name of the given role</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="RoleService.html#update(long,com.lambdaschool.usermodel.models.Role)">update</a></code>&nbsp;in interface&nbsp;<code><a href="RoleService.html" title="interface in com.lambdaschool.foundation.services">RoleService</a></code></dd>
+<dd><code><a href="RoleService.html#update(long,com.lambdaschool.usermodel.models.Role)">update</a></code>&nbsp;in interface&nbsp;<code><a href="RoleService.html" title="interface in com.lambdaschool.medcabinet.services">RoleService</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>id</code> - The primary key (long) of the role you wish to update</dd>
 <dd><code>role</code> - The role object containing the new name - only roles name can be updated through this process</dd>

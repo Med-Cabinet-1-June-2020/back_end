@@ -115,7 +115,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <!-- ======== START OF CLASS DATA ======== -->
 <main role="main">
 <div class="header">
-<div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">com.lambdaschool.foundation.services</a></div>
+<div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">com.lambdaschool.medcabinet.services</a></div>
 <h2 title="Class UseremailServiceImpl" class="title">Class UseremailServiceImpl</h2>
 </div>
 <div class="contentContainer">
@@ -123,7 +123,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li>java.lang.Object</li>
 <li>
 <ul class="inheritance">
-<li>com.lambdaschool.foundation.services.UseremailServiceImpl</li>
+<li>com.lambdaschool.medcabinet.services.UseremailServiceImpl</li>
 </ul>
 </li>
 </ul>
@@ -132,14 +132,14 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="UseremailService.html" title="interface in com.lambdaschool.foundation.services">UseremailService</a></code></dd>
+<dd><code><a href="UseremailService.html" title="interface in com.lambdaschool.medcabinet.services">UseremailService</a></code></dd>
 </dl>
 <hr>
 <pre>@Transactional
 @Service("useremailService")
 public class <span class="typeNameLabel">UseremailServiceImpl</span>
 extends java.lang.Object
-implements <a href="UseremailService.html" title="interface in com.lambdaschool.foundation.services">UseremailService</a></pre>
+implements <a href="UseremailService.html" title="interface in com.lambdaschool.medcabinet.services">UseremailService</a></pre>
 <div class="block">Implements the UseremailService Interface</div>
 </li>
 </ul>
@@ -190,28 +190,28 @@ implements <a href="UseremailService.html" title="interface in com.lambdaschool.
 </td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code>java.util.List&lt;<a href="../models/Useremail.html" title="class in com.lambdaschool.foundation.models">Useremail</a>&gt;</code></td>
+<td class="colFirst"><code>java.util.List&lt;<a href="../models/Useremail.html" title="class in com.lambdaschool.medcabinet.models">Useremail</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#findAll()">findAll</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns a list of all users and their emails</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
-<td class="colFirst"><code>java.util.List&lt;<a href="../models/Useremail.html" title="class in com.lambdaschool.foundation.models">Useremail</a>&gt;</code></td>
+<td class="colFirst"><code>java.util.List&lt;<a href="../models/Useremail.html" title="class in com.lambdaschool.medcabinet.models">Useremail</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#findByUserName(java.lang.String)">findByUserName</a></span>&#8203;(java.lang.String&nbsp;username)</code></th>
 <td class="colLast">
 <div class="block">Return a list of user email combinations based on the given username</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
-<td class="colFirst"><code><a href="../models/Useremail.html" title="class in com.lambdaschool.foundation.models">Useremail</a></code></td>
+<td class="colFirst"><code><a href="../models/Useremail.html" title="class in com.lambdaschool.medcabinet.models">Useremail</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#findUseremailById(long)">findUseremailById</a></span>&#8203;(long&nbsp;id)</code></th>
 <td class="colLast">
 <div class="block">Returns the user email combination associated with the given id</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
-<td class="colFirst"><code><a href="../models/Useremail.html" title="class in com.lambdaschool.foundation.models">Useremail</a></code></td>
+<td class="colFirst"><code><a href="../models/Useremail.html" title="class in com.lambdaschool.medcabinet.models">Useremail</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#save(long,java.lang.String)">save</a></span>&#8203;(long&nbsp;userid,
     java.lang.String&nbsp;emailaddress)</code></th>
 <td class="colLast">
@@ -219,7 +219,7 @@ implements <a href="UseremailService.html" title="interface in com.lambdaschool.
 </td>
 </tr>
 <tr id="i5" class="rowColor">
-<td class="colFirst"><code><a href="../models/Useremail.html" title="class in com.lambdaschool.foundation.models">Useremail</a></code></td>
+<td class="colFirst"><code><a href="../models/Useremail.html" title="class in com.lambdaschool.medcabinet.models">Useremail</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#update(long,java.lang.String)">update</a></span>&#8203;(long&nbsp;useremailid,
       java.lang.String&nbsp;emailaddress)</code></th>
 <td class="colLast">
@@ -275,12 +275,12 @@ implements <a href="UseremailService.html" title="interface in com.lambdaschool.
 <ul class="blockList">
 <li class="blockList">
 <h4>findAll</h4>
-<pre class="methodSignature">public&nbsp;java.util.List&lt;<a href="../models/Useremail.html" title="class in com.lambdaschool.foundation.models">Useremail</a>&gt;&nbsp;findAll()</pre>
+<pre class="methodSignature">public&nbsp;java.util.List&lt;<a href="../models/Useremail.html" title="class in com.lambdaschool.medcabinet.models">Useremail</a>&gt;&nbsp;findAll()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="UseremailService.html#findAll()">UseremailService</a></code></span></div>
 <div class="block">Returns a list of all users and their emails</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="UseremailService.html#findAll()">findAll</a></code>&nbsp;in interface&nbsp;<code><a href="UseremailService.html" title="interface in com.lambdaschool.foundation.services">UseremailService</a></code></dd>
+<dd><code><a href="UseremailService.html#findAll()">findAll</a></code>&nbsp;in interface&nbsp;<code><a href="UseremailService.html" title="interface in com.lambdaschool.medcabinet.services">UseremailService</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>List of users and their emails</dd>
 </dl>
@@ -292,12 +292,12 @@ implements <a href="UseremailService.html" title="interface in com.lambdaschool.
 <ul class="blockList">
 <li class="blockList">
 <h4>findUseremailById</h4>
-<pre class="methodSignature">public&nbsp;<a href="../models/Useremail.html" title="class in com.lambdaschool.foundation.models">Useremail</a>&nbsp;findUseremailById&#8203;(long&nbsp;id)</pre>
+<pre class="methodSignature">public&nbsp;<a href="../models/Useremail.html" title="class in com.lambdaschool.medcabinet.models">Useremail</a>&nbsp;findUseremailById&#8203;(long&nbsp;id)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="UseremailService.html#findUseremailById(long)">UseremailService</a></code></span></div>
 <div class="block">Returns the user email combination associated with the given id</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="UseremailService.html#findUseremailById(long)">findUseremailById</a></code>&nbsp;in interface&nbsp;<code><a href="UseremailService.html" title="interface in com.lambdaschool.foundation.services">UseremailService</a></code></dd>
+<dd><code><a href="UseremailService.html#findUseremailById(long)">findUseremailById</a></code>&nbsp;in interface&nbsp;<code><a href="UseremailService.html" title="interface in com.lambdaschool.medcabinet.services">UseremailService</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>id</code> - The primary key (long) of the user email combination you seek</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -317,7 +317,7 @@ public&nbsp;void&nbsp;delete&#8203;(long&nbsp;id)</pre>
 <div class="block">Remove the user email combination referenced by the given id</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="UseremailService.html#delete(long)">delete</a></code>&nbsp;in interface&nbsp;<code><a href="UseremailService.html" title="interface in com.lambdaschool.foundation.services">UseremailService</a></code></dd>
+<dd><code><a href="UseremailService.html#delete(long)">delete</a></code>&nbsp;in interface&nbsp;<code><a href="UseremailService.html" title="interface in com.lambdaschool.medcabinet.services">UseremailService</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>id</code> - The primary key (long) of the user email combination you seek</dd>
 </dl>
@@ -330,13 +330,13 @@ public&nbsp;void&nbsp;delete&#8203;(long&nbsp;id)</pre>
 <li class="blockList">
 <h4>update</h4>
 <pre class="methodSignature">@Transactional
-public&nbsp;<a href="../models/Useremail.html" title="class in com.lambdaschool.foundation.models">Useremail</a>&nbsp;update&#8203;(long&nbsp;useremailid,
+public&nbsp;<a href="../models/Useremail.html" title="class in com.lambdaschool.medcabinet.models">Useremail</a>&nbsp;update&#8203;(long&nbsp;useremailid,
                         java.lang.String&nbsp;emailaddress)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="UseremailService.html#update(long,java.lang.String)">UseremailService</a></code></span></div>
 <div class="block">Replaces the email of the user email combination you seek</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="UseremailService.html#update(long,java.lang.String)">update</a></code>&nbsp;in interface&nbsp;<code><a href="UseremailService.html" title="interface in com.lambdaschool.foundation.services">UseremailService</a></code></dd>
+<dd><code><a href="UseremailService.html#update(long,java.lang.String)">update</a></code>&nbsp;in interface&nbsp;<code><a href="UseremailService.html" title="interface in com.lambdaschool.medcabinet.services">UseremailService</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>useremailid</code> - The primary key (long) of the user email combination you seek</dd>
 <dd><code>emailaddress</code> - The new email address (String) for this user email combination</dd>
@@ -352,13 +352,13 @@ public&nbsp;<a href="../models/Useremail.html" title="class in com.lambdaschool.
 <li class="blockList">
 <h4>save</h4>
 <pre class="methodSignature">@Transactional
-public&nbsp;<a href="../models/Useremail.html" title="class in com.lambdaschool.foundation.models">Useremail</a>&nbsp;save&#8203;(long&nbsp;userid,
+public&nbsp;<a href="../models/Useremail.html" title="class in com.lambdaschool.medcabinet.models">Useremail</a>&nbsp;save&#8203;(long&nbsp;userid,
                       java.lang.String&nbsp;emailaddress)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="UseremailService.html#save(long,java.lang.String)">UseremailService</a></code></span></div>
 <div class="block">Add a new User Email combination</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="UseremailService.html#save(long,java.lang.String)">save</a></code>&nbsp;in interface&nbsp;<code><a href="UseremailService.html" title="interface in com.lambdaschool.foundation.services">UseremailService</a></code></dd>
+<dd><code><a href="UseremailService.html#save(long,java.lang.String)">save</a></code>&nbsp;in interface&nbsp;<code><a href="UseremailService.html" title="interface in com.lambdaschool.medcabinet.services">UseremailService</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>userid</code> - the userid of the new user email combination</dd>
 <dd><code>emailaddress</code> - the email address of the new user email combination</dd>
@@ -373,12 +373,12 @@ public&nbsp;<a href="../models/Useremail.html" title="class in com.lambdaschool.
 <ul class="blockListLast">
 <li class="blockList">
 <h4>findByUserName</h4>
-<pre class="methodSignature">public&nbsp;java.util.List&lt;<a href="../models/Useremail.html" title="class in com.lambdaschool.foundation.models">Useremail</a>&gt;&nbsp;findByUserName&#8203;(java.lang.String&nbsp;username)</pre>
+<pre class="methodSignature">public&nbsp;java.util.List&lt;<a href="../models/Useremail.html" title="class in com.lambdaschool.medcabinet.models">Useremail</a>&gt;&nbsp;findByUserName&#8203;(java.lang.String&nbsp;username)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="UseremailService.html#findByUserName(java.lang.String)">UseremailService</a></code></span></div>
 <div class="block">Return a list of user email combinations based on the given username</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="UseremailService.html#findByUserName(java.lang.String)">findByUserName</a></code>&nbsp;in interface&nbsp;<code><a href="UseremailService.html" title="interface in com.lambdaschool.foundation.services">UseremailService</a></code></dd>
+<dd><code><a href="UseremailService.html#findByUserName(java.lang.String)">findByUserName</a></code>&nbsp;in interface&nbsp;<code><a href="UseremailService.html" title="interface in com.lambdaschool.medcabinet.services">UseremailService</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>username</code> - The username of the user email combinations you seek</dd>
 <dt><span class="returnLabel">Returns:</span></dt>

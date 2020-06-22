@@ -115,7 +115,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <!-- ======== START OF CLASS DATA ======== -->
 <main role="main">
 <div class="header">
-<div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">com.lambdaschool.foundation.controllers</a></div>
+<div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">com.lambdaschool.medcabinet.controllers</a></div>
 <h2 title="Class RolesController" class="title">Class RolesController</h2>
 </div>
 <div class="contentContainer">
@@ -123,7 +123,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li>java.lang.Object</li>
 <li>
 <ul class="inheritance">
-<li>com.lambdaschool.foundation.controllers.RolesController</li>
+<li>com.lambdaschool.medcabinet.controllers.RolesController</li>
 </ul>
 </li>
 </ul>
@@ -179,7 +179,7 @@ extends java.lang.Object</pre>
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>org.springframework.http.ResponseEntity&lt;?&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addNewRole(com.lambdaschool.usermodel.models.Role)">addNewRole</a></span>&#8203;(@Valid <a href="../models/Role.html" title="class in com.lambdaschool.foundation.models">Role</a>&nbsp;newRole)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addNewRole(com.lambdaschool.usermodel.models.Role)">addNewRole</a></span>&#8203;(@Valid <a href="../models/Role.html" title="class in com.lambdaschool.medcabinet.models">Role</a>&nbsp;newRole)</code></th>
 <td class="colLast">
 <div class="block">Given a complete Role object, create a new Role record
  <br>Example: <a href="http://localhost:2019/roles/role">http://localhost:2019/roles/role</a></div>
@@ -219,7 +219,7 @@ extends java.lang.Object</pre>
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code>org.springframework.http.ResponseEntity&lt;?&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#patchUpdateRole(long,com.lambdaschool.usermodel.models.Role)">patchUpdateRole</a></span>&#8203;(long&nbsp;roleid,
-               @Valid <a href="../models/Role.html" title="class in com.lambdaschool.foundation.models">Role</a>&nbsp;newRole)</code></th>
+               @Valid <a href="../models/Role.html" title="class in com.lambdaschool.medcabinet.models">Role</a>&nbsp;newRole)</code></th>
 <td class="colLast">
 <div class="block">The process allows you to update a role name only!
  <br>Example: <a href="http://localhost:2019/roles/role/3">http://localhost:2019/roles/role/3</a></div>
@@ -228,7 +228,7 @@ extends java.lang.Object</pre>
 <tr id="i6" class="altColor">
 <td class="colFirst"><code>org.springframework.http.ResponseEntity&lt;?&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#putUpdateRole(long,com.lambdaschool.usermodel.models.Role)">putUpdateRole</a></span>&#8203;(long&nbsp;roleid,
-             @Valid <a href="../models/Role.html" title="class in com.lambdaschool.foundation.models">Role</a>&nbsp;newRole)</code></th>
+             @Valid <a href="../models/Role.html" title="class in com.lambdaschool.medcabinet.models">Role</a>&nbsp;newRole)</code></th>
 <td class="colLast">
 <div class="block">The process allows you to update a role name only!
  <br>Example: <a href="http://localhost:2019/roles/role/3">http://localhost:2019/roles/role/3</a></div>
@@ -349,7 +349,7 @@ public&nbsp;org.springframework.http.ResponseEntity&lt;?&gt;&nbsp;getRoleByName&
 <pre class="methodSignature">@PostMapping(value="/role",
              consumes="application/json")
 public&nbsp;org.springframework.http.ResponseEntity&lt;?&gt;&nbsp;addNewRole&#8203;(@Valid @RequestBody
-                                                             @Valid <a href="../models/Role.html" title="class in com.lambdaschool.foundation.models">Role</a>&nbsp;newRole)</pre>
+                                                             @Valid <a href="../models/Role.html" title="class in com.lambdaschool.medcabinet.models">Role</a>&nbsp;newRole)</pre>
 <div class="block">Given a complete Role object, create a new Role record
  <br>Example: <a href="http://localhost:2019/roles/role">http://localhost:2019/roles/role</a></div>
 <dl>
@@ -358,7 +358,7 @@ public&nbsp;org.springframework.http.ResponseEntity&lt;?&gt;&nbsp;addNewRole&#82
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>A location header with the URI to the newly created role and a status of CREATED</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../services/RoleService.html#save(com.lambdaschool.foundation.models.Role)"><code>RoleService.save(Role)</code></a></dd>
+<dd><a href="../services/RoleService.html#save(com.lambdaschool.medcabinet.models.Role)"><code>RoleService.save(Role)</code></a></dd>
 </dl>
 </li>
 </ul>
@@ -392,7 +392,7 @@ public&nbsp;org.springframework.http.ResponseEntity&lt;?&gt;&nbsp;deleteRoleById
 public&nbsp;org.springframework.http.ResponseEntity&lt;?&gt;&nbsp;putUpdateRole&#8203;(@PathVariable
                                                                 long&nbsp;roleid,
                                                                 @Valid @RequestBody
-                                                                @Valid <a href="../models/Role.html" title="class in com.lambdaschool.foundation.models">Role</a>&nbsp;newRole)</pre>
+                                                                @Valid <a href="../models/Role.html" title="class in com.lambdaschool.medcabinet.models">Role</a>&nbsp;newRole)</pre>
 <div class="block">The process allows you to update a role name only!
  <br>Example: <a href="http://localhost:2019/roles/role/3">http://localhost:2019/roles/role/3</a></div>
 <dl>
@@ -415,7 +415,7 @@ public&nbsp;org.springframework.http.ResponseEntity&lt;?&gt;&nbsp;putUpdateRole&
 public&nbsp;org.springframework.http.ResponseEntity&lt;?&gt;&nbsp;patchUpdateRole&#8203;(@PathVariable
                                                                   long&nbsp;roleid,
                                                                   @Valid @RequestBody
-                                                                  @Valid <a href="../models/Role.html" title="class in com.lambdaschool.foundation.models">Role</a>&nbsp;newRole)</pre>
+                                                                  @Valid <a href="../models/Role.html" title="class in com.lambdaschool.medcabinet.models">Role</a>&nbsp;newRole)</pre>
 <div class="block">The process allows you to update a role name only!
  <br>Example: <a href="http://localhost:2019/roles/role/3">http://localhost:2019/roles/role/3</a></div>
 <dl>

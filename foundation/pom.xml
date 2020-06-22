@@ -11,8 +11,8 @@
     <groupId>com.lambdaschool</groupId>
     <artifactId>foundation</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>foundation</name>
-    <description>A Starting project for Spring Boot</description>
+    <name>Med Cabinet</name>
+    <description>A cannibus recommendation service</description>
 
     <properties>
         <java.version>14</java.version>
@@ -112,7 +112,7 @@
     </dependencies>
 
     <build>
-        <finalName>jrmmba-foundation</finalName>
+        <finalName>medcabinetjune2020</finalName>
 
         <plugins>
             <plugin>

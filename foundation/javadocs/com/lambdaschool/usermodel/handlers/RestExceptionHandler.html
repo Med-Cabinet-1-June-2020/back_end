@@ -115,7 +115,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <!-- ======== START OF CLASS DATA ======== -->
 <main role="main">
 <div class="header">
-<div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">com.lambdaschool.foundation.handlers</a></div>
+<div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">com.lambdaschool.medcabinet.handlers</a></div>
 <h2 title="Class RestExceptionHandler" class="title">Class RestExceptionHandler</h2>
 </div>
 <div class="contentContainer">
@@ -126,7 +126,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li>org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler</li>
 <li>
 <ul class="inheritance">
-<li>com.lambdaschool.foundation.handlers.RestExceptionHandler</li>
+<li>com.lambdaschool.medcabinet.handlers.RestExceptionHandler</li>
 </ul>
 </li>
 </ul>
@@ -347,14 +347,14 @@ extends org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExce
 </tr>
 <tr id="i14" class="altColor">
 <td class="colFirst"><code>org.springframework.http.ResponseEntity&lt;?&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#handleResourceFoundException(com.lambdaschool.usermodel.exceptions.ResourceFoundException)">handleResourceFoundException</a></span>&#8203;(<a href="../exceptions/ResourceFoundException.html" title="class in com.lambdaschool.foundation.exceptions">ResourceFoundException</a>&nbsp;rfe)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#handleResourceFoundException(com.lambdaschool.usermodel.exceptions.ResourceFoundException)">handleResourceFoundException</a></span>&#8203;(<a href="../exceptions/ResourceFoundException.html" title="class in com.lambdaschool.medcabinet.exceptions">ResourceFoundException</a>&nbsp;rfe)</code></th>
 <td class="colLast">
 <div class="block">Our custom handling of ResourceFoundExceptions.</div>
 </td>
 </tr>
 <tr id="i15" class="rowColor">
 <td class="colFirst"><code>org.springframework.http.ResponseEntity&lt;?&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#handleResourceNotFoundException(com.lambdaschool.usermodel.exceptions.ResourceNotFoundException)">handleResourceNotFoundException</a></span>&#8203;(<a href="../exceptions/ResourceNotFoundException.html" title="class in com.lambdaschool.foundation.exceptions">ResourceNotFoundException</a>&nbsp;rnfe)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#handleResourceNotFoundException(com.lambdaschool.usermodel.exceptions.ResourceNotFoundException)">handleResourceNotFoundException</a></span>&#8203;(<a href="../exceptions/ResourceNotFoundException.html" title="class in com.lambdaschool.medcabinet.exceptions">ResourceNotFoundException</a>&nbsp;rnfe)</code></th>
 <td class="colLast">
 <div class="block">Our custom handling of ResourceNotFoundExceptions.</div>
 </td>
@@ -436,8 +436,8 @@ extends org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExce
 <ul class="blockList">
 <li class="blockList">
 <h4>handleResourceNotFoundException</h4>
-<pre class="methodSignature">@ExceptionHandler(<a href="../exceptions/ResourceNotFoundException.html" title="class in com.lambdaschool.foundation.exceptions">ResourceNotFoundException.class</a>)
-public&nbsp;org.springframework.http.ResponseEntity&lt;?&gt;&nbsp;handleResourceNotFoundException&#8203;(<a href="../exceptions/ResourceNotFoundException.html" title="class in com.lambdaschool.foundation.exceptions">ResourceNotFoundException</a>&nbsp;rnfe)</pre>
+<pre class="methodSignature">@ExceptionHandler(<a href="../exceptions/ResourceNotFoundException.html" title="class in com.lambdaschool.medcabinet.exceptions">ResourceNotFoundException.class</a>)
+public&nbsp;org.springframework.http.ResponseEntity&lt;?&gt;&nbsp;handleResourceNotFoundException&#8203;(<a href="../exceptions/ResourceNotFoundException.html" title="class in com.lambdaschool.medcabinet.exceptions">ResourceNotFoundException</a>&nbsp;rnfe)</pre>
 <div class="block">Our custom handling of ResourceNotFoundExceptions. This gets thrown manually by our application.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -453,8 +453,8 @@ public&nbsp;org.springframework.http.ResponseEntity&lt;?&gt;&nbsp;handleResource
 <ul class="blockList">
 <li class="blockList">
 <h4>handleResourceFoundException</h4>
-<pre class="methodSignature">@ExceptionHandler(<a href="../exceptions/ResourceFoundException.html" title="class in com.lambdaschool.foundation.exceptions">ResourceFoundException.class</a>)
-public&nbsp;org.springframework.http.ResponseEntity&lt;?&gt;&nbsp;handleResourceFoundException&#8203;(<a href="../exceptions/ResourceFoundException.html" title="class in com.lambdaschool.foundation.exceptions">ResourceFoundException</a>&nbsp;rfe)</pre>
+<pre class="methodSignature">@ExceptionHandler(<a href="../exceptions/ResourceFoundException.html" title="class in com.lambdaschool.medcabinet.exceptions">ResourceFoundException.class</a>)
+public&nbsp;org.springframework.http.ResponseEntity&lt;?&gt;&nbsp;handleResourceFoundException&#8203;(<a href="../exceptions/ResourceFoundException.html" title="class in com.lambdaschool.medcabinet.exceptions">ResourceFoundException</a>&nbsp;rfe)</pre>
 <div class="block">Our custom handling of ResourceFoundExceptions. This gets thrown manually by our application.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>

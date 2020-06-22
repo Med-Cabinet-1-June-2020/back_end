@@ -115,7 +115,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <!-- ======== START OF CLASS DATA ======== -->
 <main role="main">
 <div class="header">
-<div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">com.lambdaschool.foundation.repository</a></div>
+<div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">com.lambdaschool.medcabinet.repository</a></div>
 <h2 title="Interface UserRepository" class="title">Interface UserRepository</h2>
 </div>
 <div class="contentContainer">
@@ -124,11 +124,11 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li class="blockList">
 <dl>
 <dt>All Superinterfaces:</dt>
-<dd><code>org.springframework.data.repository.CrudRepository&lt;<a href="../models/User.html" title="class in com.lambdaschool.foundation.models">User</a>,&#8203;java.lang.Long&gt;</code>, <code>org.springframework.data.repository.Repository&lt;<a href="../models/User.html" title="class in com.lambdaschool.foundation.models">User</a>,&#8203;java.lang.Long&gt;</code></dd>
+<dd><code>org.springframework.data.repository.CrudRepository&lt;<a href="../models/User.html" title="class in com.lambdaschool.medcabinet.models">User</a>,&#8203;java.lang.Long&gt;</code>, <code>org.springframework.data.repository.Repository&lt;<a href="../models/User.html" title="class in com.lambdaschool.medcabinet.models">User</a>,&#8203;java.lang.Long&gt;</code></dd>
 </dl>
 <hr>
 <pre>public interface <span class="typeNameLabel">UserRepository</span>
-extends org.springframework.data.repository.CrudRepository&lt;<a href="../models/User.html" title="class in com.lambdaschool.foundation.models">User</a>,&#8203;java.lang.Long&gt;</pre>
+extends org.springframework.data.repository.CrudRepository&lt;<a href="../models/User.html" title="class in com.lambdaschool.medcabinet.models">User</a>,&#8203;java.lang.Long&gt;</pre>
 <div class="block">The CRUD repository connecting User to the rest of the application</div>
 </li>
 </ul>
@@ -151,7 +151,7 @@ extends org.springframework.data.repository.CrudRepository&lt;<a href="../models
 <th class="colLast" scope="col">Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code><a href="../views/JustTheCount.html" title="interface in com.lambdaschool.foundation.views">JustTheCount</a></code></td>
+<td class="colFirst"><code><a href="../views/JustTheCount.html" title="interface in com.lambdaschool.medcabinet.views">JustTheCount</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#checkUserRolesCombo(long,long)">checkUserRolesCombo</a></span>&#8203;(long&nbsp;userid,
                    long&nbsp;roleid)</code></th>
 <td class="colLast">
@@ -167,21 +167,21 @@ extends org.springframework.data.repository.CrudRepository&lt;<a href="../models
 </td>
 </tr>
 <tr id="i2" class="altColor">
-<td class="colFirst"><code><a href="../models/User.html" title="class in com.lambdaschool.foundation.models">User</a></code></td>
+<td class="colFirst"><code><a href="../models/User.html" title="class in com.lambdaschool.medcabinet.models">User</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#findByUsername(java.lang.String)">findByUsername</a></span>&#8203;(java.lang.String&nbsp;username)</code></th>
 <td class="colLast">
 <div class="block">Find a user based off over username</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
-<td class="colFirst"><code>java.util.List&lt;<a href="../models/User.html" title="class in com.lambdaschool.foundation.models">User</a>&gt;</code></td>
+<td class="colFirst"><code>java.util.List&lt;<a href="../models/User.html" title="class in com.lambdaschool.medcabinet.models">User</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#findByUsernameContainingIgnoreCase(java.lang.String)">findByUsernameContainingIgnoreCase</a></span>&#8203;(java.lang.String&nbsp;name)</code></th>
 <td class="colLast">
 <div class="block">Find all users whose name contains a given substring ignoring case</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
-<td class="colFirst"><code>java.util.List&lt;<a href="../views/UserNameCountEmails.html" title="interface in com.lambdaschool.foundation.views">UserNameCountEmails</a>&gt;</code></td>
+<td class="colFirst"><code>java.util.List&lt;<a href="../views/UserNameCountEmails.html" title="interface in com.lambdaschool.medcabinet.views">UserNameCountEmails</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getCountUserEmails()">getCountUserEmails</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Custom Query finding the users and the count of their emails.</div>
@@ -226,7 +226,7 @@ extends org.springframework.data.repository.CrudRepository&lt;<a href="../models
 <ul class="blockList">
 <li class="blockList">
 <h4>findByUsername</h4>
-<pre class="methodSignature"><a href="../models/User.html" title="class in com.lambdaschool.foundation.models">User</a>&nbsp;findByUsername&#8203;(java.lang.String&nbsp;username)</pre>
+<pre class="methodSignature"><a href="../models/User.html" title="class in com.lambdaschool.medcabinet.models">User</a>&nbsp;findByUsername&#8203;(java.lang.String&nbsp;username)</pre>
 <div class="block">Find a user based off over username</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -242,7 +242,7 @@ extends org.springframework.data.repository.CrudRepository&lt;<a href="../models
 <ul class="blockList">
 <li class="blockList">
 <h4>findByUsernameContainingIgnoreCase</h4>
-<pre class="methodSignature">java.util.List&lt;<a href="../models/User.html" title="class in com.lambdaschool.foundation.models">User</a>&gt;&nbsp;findByUsernameContainingIgnoreCase&#8203;(java.lang.String&nbsp;name)</pre>
+<pre class="methodSignature">java.util.List&lt;<a href="../models/User.html" title="class in com.lambdaschool.medcabinet.models">User</a>&gt;&nbsp;findByUsernameContainingIgnoreCase&#8203;(java.lang.String&nbsp;name)</pre>
 <div class="block">Find all users whose name contains a given substring ignoring case</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -260,7 +260,7 @@ extends org.springframework.data.repository.CrudRepository&lt;<a href="../models
 <h4>getCountUserEmails</h4>
 <pre class="methodSignature">@Query(value="SELECT u.username as usernamerpt, count(ue.useremailid) as countemails FROM users u JOIN useremails ue ON u.userid = ue.userid GROUP BY u.username",
        nativeQuery=true)
-java.util.List&lt;<a href="../views/UserNameCountEmails.html" title="interface in com.lambdaschool.foundation.views">UserNameCountEmails</a>&gt;&nbsp;getCountUserEmails()</pre>
+java.util.List&lt;<a href="../views/UserNameCountEmails.html" title="interface in com.lambdaschool.medcabinet.views">UserNameCountEmails</a>&gt;&nbsp;getCountUserEmails()</pre>
 <div class="block">Custom Query finding the users and the count of their emails.
  nativeQuery is set to true. This means the query will be using the actual database names of these. A preference of mine.
  native queries are using faster
@@ -279,7 +279,7 @@ java.util.List&lt;<a href="../views/UserNameCountEmails.html" title="interface i
 <h4>checkUserRolesCombo</h4>
 <pre class="methodSignature">@Query(value="SELECT COUNT(*) as count FROM userroles WHERE userid = :userid AND roleid = :roleid",
        nativeQuery=true)
-<a href="../views/JustTheCount.html" title="interface in com.lambdaschool.foundation.views">JustTheCount</a>&nbsp;checkUserRolesCombo&#8203;(long&nbsp;userid,
+<a href="../views/JustTheCount.html" title="interface in com.lambdaschool.medcabinet.views">JustTheCount</a>&nbsp;checkUserRolesCombo&#8203;(long&nbsp;userid,
                                  long&nbsp;roleid)</pre>
 <div class="block">Counts the number of user role combinations for the given userid and roleid. Answer should be only 0 or 1.</div>
 <dl>

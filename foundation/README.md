@@ -634,7 +634,7 @@ The table layout is as follows
     "status": 404,
     "detail": "Error from a Lambda School Application Useremail with id 8888 Not Found!",
     "timestamp": "2020-04-24 17:52:18",
-    "developerMessage": "com.lambdaschool.foundation.exceptions.ResourceNotFoundException",
+    "developerMessage": "com.lambdaschool.medcabinet.exceptions.ResourceNotFoundException",
     "errors": []
 }
 ```
@@ -2492,7 +2492,7 @@ Status CREATED
     "status": 404,
     "detail": "Error from a Lambda School Application cinnamon not authorized to make change",
     "timestamp": "2020-04-24 18:31:45",
-    "developerMessage": "com.lambdaschool.foundation.exceptions.ResourceNotFoundException",
+    "developerMessage": "com.lambdaschool.medcabinet.exceptions.ResourceNotFoundException",
     "errors": []
 }
 ```
