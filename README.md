@@ -97,8 +97,9 @@ Returns data in the following format
         "rating": 0.0,
         "description": null,
         "users": []
-    }
-    ```
+    }   
+    
+```
 
 Saving Recommendations to a User
 --------------------------------
