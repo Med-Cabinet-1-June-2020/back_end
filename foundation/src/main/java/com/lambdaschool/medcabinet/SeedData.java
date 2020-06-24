@@ -75,15 +75,15 @@ public class SeedData
         Strain s1 = new Strain("Alaskan Ice","sativa",f1, p1, n1, m1,"hybrid", 4.4,desc);
         Strain s2 = new Strain("Agent Tangie","hybrid",f1, p1, n1, m1,"sativa", 4.5,desc2);
 
-        strainService.save(s1);
-        strainService.save(s2);
+        s1 = strainService.save(s1);
+        s2 = strainService.save(s2);
 
         User u1 = new User("admin",
                            "password",
                            "admin@lambdaschool.local");
 
-//        u1.getStrains().add(s1);
-//        u1.getStrains().add(s2);
+        u1.getStrains().add(s1);
+        u1.getStrains().add(s2);
 
         userService.save(u1);
 

@@ -13,4 +13,6 @@ public interface StrainService {
     void delete(long id);
 
     Strain findByStrainById(long id);
+
+    Strain findByName(String name);
 }

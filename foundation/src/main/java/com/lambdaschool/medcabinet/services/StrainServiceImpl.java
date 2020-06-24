@@ -60,4 +60,16 @@ public class StrainServiceImpl implements StrainService {
         return strainRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Strain " + id + " Not Found"));
     }
+
+    @Override
+    public Strain findByName(String name) {
+        Strain sMatch = strainRepository.findByStrainIgnoreCase(name.toLowerCase());
+        if (sMatch == null)
+        {
+            Strain mystrain = new Strain();
+            mystrain.setStrain("empty");
+            return mystrain;
+        }
+        return sMatch;
+    }
 }

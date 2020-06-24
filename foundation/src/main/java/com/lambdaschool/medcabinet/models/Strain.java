@@ -16,6 +16,7 @@ public class Strain extends Auditable{
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long strainid;
 
+    @Column(nullable = false, unique = true)
     private String strain;
 
     private String race;

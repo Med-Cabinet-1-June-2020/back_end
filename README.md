@@ -53,3 +53,61 @@ Logs the new user in on success and returns the token:
 and the Location Header of the new user
 
 `Location Header: https://medcabinetjune2020.herokuapp.com/users/user/62`
+
+
+Getting a recommendation
+---------
+
+Temporary Testing only
+
+GET https://medcabinetjune2020.herokuapp.com/req/new
+
+Send list of desired effects in JSON to:
+
+POST https://medcabinetjune2020.herokuapp.com/req/new
+
+Returns data in the following format
+```
+{
+        "strainid": 8,
+        "strain": "Afpak",
+        "race": "hybrid",
+        "flavors": [
+            "Chemical",
+            "Earthy",
+            "Pine"
+        ],
+        "positive": [
+            "Sleepy",
+            "Happy",
+            "Relaxed",
+            "Hungry"
+        ],
+        "negative": [
+            "Dizzy"
+        ],
+        "medical": [
+            "Pain",
+            "Lack of Appetite",
+            "Insomnia",
+            "Depression",
+            "Stress"
+        ],
+        "type": null,
+        "rating": 0.0,
+        "description": null,
+        "users": []
+    }
+    ```
+
+Saving Recommendations to a User
+--------------------------------
+TBD
+
+
+Getting all User Information
+----------------------------
+
+GET https://medcabinetjune2020.herokuapp.com/users/user/{userid}
+
+
