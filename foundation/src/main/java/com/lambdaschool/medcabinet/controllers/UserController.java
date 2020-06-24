@@ -1,7 +1,9 @@
 package com.lambdaschool.medcabinet.controllers;
 
 import com.lambdaschool.medcabinet.models.ErrorDetail;
+import com.lambdaschool.medcabinet.models.Strain;
 import com.lambdaschool.medcabinet.models.User;
+import com.lambdaschool.medcabinet.services.StrainService;
 import com.lambdaschool.medcabinet.services.UserService;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
@@ -41,6 +43,9 @@ public class UserController
      */
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private StrainService strainService;
 
     /**
      * Returns a list of all users
@@ -305,5 +310,19 @@ public class UserController
         User u = userService.findByName(authentication.getName());
         return new ResponseEntity<>(u,
                                     HttpStatus.OK);
+    }
+
+    @PostMapping(value = "/user/{userid}/strains/add/{strainid}")
+    public ResponseEntity<?> addStrainToUser(@PathVariable long strainid, @PathVariable long userid)
+    {
+        User user = userService.findUserById(userid);
+
+        Strain strain = strainService.findByStrainById(strainid);
+
+
+        user.addStrain(strain);
+        userService.save(user);
+
+        return new ResponseEntity<>(HttpStatus.CREATED);
     }
 }

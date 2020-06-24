@@ -1,8 +1,6 @@
 package com.lambdaschool.medcabinet;
 
-import com.github.javafaker.Faker;
-import com.github.javafaker.service.FakeValuesService;
-import com.github.javafaker.service.RandomService;
+
 import com.lambdaschool.medcabinet.models.Strain;
 import com.lambdaschool.medcabinet.models.User;
 import com.lambdaschool.medcabinet.services.StrainService;
@@ -21,7 +19,7 @@ import java.util.*;
  * after the application context has been loaded.
  */
 @Transactional
-@Component
+//@Component
 public class SeedData
         implements CommandLineRunner
 {

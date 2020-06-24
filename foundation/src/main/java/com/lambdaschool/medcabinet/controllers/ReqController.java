@@ -1,6 +1,7 @@
 package com.lambdaschool.medcabinet.controllers;
 
 import com.lambdaschool.medcabinet.models.Strain;
+import com.lambdaschool.medcabinet.models.StrainEffects;
 import com.lambdaschool.medcabinet.models.User;
 import com.lambdaschool.medcabinet.services.StrainService;
 import com.lambdaschool.medcabinet.services.UserService;
@@ -11,15 +12,15 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.util.LinkedMultiValueMap;
+import org.springframework.util.MultiValueMap;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Set;
 
 @RestController
 @RequestMapping("/req")
@@ -64,6 +65,31 @@ public class ReqController {
         return new ResponseEntity<>(withIds, HttpStatus.OK);
 
 
+
+    }
+    //testing
+    @PostMapping(value = "new", produces = {"application/json"}, consumes = {"application/json"})
+    public ResponseEntity<?> newCustomReq(@RequestBody StrainEffects strainEffects)
+    {
+        String params = "";
+        MultiValueMap<String, String> map = new LinkedMultiValueMap<>();
+        for (String s : strainEffects.getEffects())
+        {
+            map.add("effects", s);
+            params = params + "effects=" + s + "&";
+        }
+        for (String s : strainEffects.getMedical())
+        {
+            map.add("effects", s);
+            params = params + "effects=" + s + "&";
+        }
+        for (String s : map.get("effects"))
+        {
+            System.out.println(s);
+        }
+        System.out.println(params);
+
+        return new ResponseEntity<>(params, HttpStatus.OK);
 
     }
 }
