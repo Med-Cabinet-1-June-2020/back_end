@@ -1,10 +1,9 @@
 package com.lambdaschool.medcabinet.services;
 
-import com.lambdaschool.medcabinet.exceptions.ResourceFoundException;
 import com.lambdaschool.medcabinet.exceptions.ResourceNotFoundException;
 import com.lambdaschool.medcabinet.handlers.HelperFunctions;
+import com.lambdaschool.medcabinet.models.Strain;
 import com.lambdaschool.medcabinet.models.User;
-import com.lambdaschool.medcabinet.models.Useremail;
 import com.lambdaschool.medcabinet.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -33,6 +32,9 @@ public class UserServiceImpl
      */
     @Autowired
     private UserAuditing userAuditing;
+
+    @Autowired
+    private StrainService strainService;
 
     /**
      * Connects this service to the helper functions for this application
@@ -107,13 +109,12 @@ public class UserServiceImpl
         newUser.setPrimaryemail(user.getPrimaryemail()
                                         .toLowerCase());
 
-        newUser.getUseremails()
-                .clear();
-        for (Useremail ue : user.getUseremails())
+
+        newUser.getStrains().clear();
+        for (Strain s : user.getStrains())
         {
-            newUser.getUseremails()
-                    .add(new Useremail(newUser,
-                                       ue.getUseremail()));
+            Strain newStrain = strainService.findByStrainById(s.getStrainid());
+            newUser.addStrain(newStrain);
         }
 
         return userrepos.save(newUser);
@@ -146,18 +147,6 @@ public class UserServiceImpl
                                                     .toLowerCase());
             }
 
-            if (user.getUseremails()
-                    .size() > 0)
-            {
-                currentUser.getUseremails()
-                        .clear();
-                for (Useremail ue : user.getUseremails())
-                {
-                    currentUser.getUseremails()
-                            .add(new Useremail(currentUser,
-                                               ue.getUseremail()));
-                }
-            }
 
             return userrepos.save(currentUser);
         } else

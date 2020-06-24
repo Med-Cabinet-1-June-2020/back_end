@@ -1,14 +1,11 @@
 package com.lambdaschool.medcabinet;
 
 import com.lambdaschool.medcabinet.models.User;
-import com.lambdaschool.medcabinet.models.Useremail;
 import com.lambdaschool.medcabinet.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
-
-import java.util.ArrayList;
 
 /**
  * SeedData puts both known and random data into the database. It implements CommandLineRunner.
@@ -50,12 +47,7 @@ public class SeedData
         User u1 = new User("admin",
                            "password",
                            "admin@lambdaschool.local");
-        u1.getUseremails()
-                .add(new Useremail(u1,
-                                   "admin@email.local"));
-        u1.getUseremails()
-                .add(new Useremail(u1,
-                                   "admin@mymail.local"));
+
 
         userService.save(u1);
 
@@ -63,24 +55,14 @@ public class SeedData
         User u2 = new User("cinnamon",
                            "1234567",
                            "cinnamon@lambdaschool.local");
-        u2.getUseremails()
-                .add(new Useremail(u2,
-                                   "cinnamon@mymail.local"));
-        u2.getUseremails()
-                .add(new Useremail(u2,
-                                   "hops@mymail.local"));
-        u2.getUseremails()
-                .add(new Useremail(u2,
-                                   "bunny@email.local"));
+
         userService.save(u2);
 
 
         User u3 = new User("barnbarn",
                            "ILuvM4th!",
                            "barnbarn@lambdaschool.local");
-        u3.getUseremails()
-                .add(new Useremail(u3,
-                                   "barnbarn@email.local"));
+
         userService.save(u3);
 
 
