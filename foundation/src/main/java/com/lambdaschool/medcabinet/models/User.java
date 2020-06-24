@@ -8,14 +8,7 @@ import io.swagger.annotations.ApiModelProperty;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -85,14 +78,12 @@ public class User
     @Email
     private String primaryemail;
 
-    @ApiModelProperty(name = "user emails",
-            value = "List of user emails for this users")
-    @OneToMany(mappedBy = "user",
-            cascade = CascadeType.ALL,
-            orphanRemoval = true)
-    @JsonIgnoreProperties(value = "user",
-            allowSetters = true)
-    private List<Useremail> useremails = new ArrayList<>();
+    @ManyToMany
+    @JoinTable(name = "userstrains",
+            joinColumns = @JoinColumn(name = "userid"),
+            inverseJoinColumns = @JoinColumn(name = "strainid"))
+    @JsonIgnoreProperties(value = "users", allowSetters = true)
+    private List<Strain> strains = new ArrayList<>();
 
     /**
      * Default constructor used primarily by the JPA.
@@ -221,24 +212,24 @@ public class User
         this.password = passwordEncoder.encode(password);
     }
 
-    /**
-     * Getter for the list of useremails for this user
-     *
-     * @return the list of useremails (List(Useremail)) for this user
-     */
-    public List<Useremail> getUseremails()
-    {
-        return useremails;
+    public List<Strain> getStrains() {
+        return strains;
     }
 
-    /**
-     * Setter for list of useremails for this user
-     *
-     * @param useremails the new list of useremails (List(Useremail)) for this user
-     */
-    public void setUseremails(List<Useremail> useremails)
+    public void setStrains(List<Strain> strains) {
+        this.strains = strains;
+    }
+
+    public void addStrain(Strain strain)
     {
-        this.useremails = useremails;
+        strains.add(strain);
+        strain.getUsers().add(this);
+    }
+
+    public void removeStrain(Strain strain)
+    {
+        strains.remove(strain);
+        strain.getUsers().remove(this);
     }
 
     /**
