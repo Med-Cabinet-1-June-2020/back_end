@@ -58,9 +58,9 @@ and the Location Header of the new user
 Getting a recommendation
 ---------
 
-Temporary Testing only
+Getting a static list of strains
 
-GET https://medcabinetjune2020.herokuapp.com/req/new
+GET https://medcabinetjune2020.herokuapp.com/strains/all
 
 Send list of desired effects in JSON to:
 
