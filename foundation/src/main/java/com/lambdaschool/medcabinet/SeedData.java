@@ -19,7 +19,7 @@ import java.util.*;
  * after the application context has been loaded.
  */
 @Transactional
-//@Component
+@Component
 public class SeedData
         implements CommandLineRunner
 {
@@ -70,8 +70,8 @@ public class SeedData
         String desc = "Alaskan Ice by Green House Seeds is a powerful sativa that crosses a euphoric White Widow hybrid with the energizing buzz of Haze. Frostlike resin blankets the buds in a promise of soaring psychoactivity, anchored only by its moderate CBD content. The intensity of this 70% sativa strain is recommended for evening consumption and unproductive weekends. Alaskan Ice is a slight variant of Moby Dick, but poses a greater challenge to growers; cultivators with the expertise to raise Alaskan Ice will be rewarded with a highly potent harvest of sour, spicy buds following a 9 week flowering period. The high resin content of Alaskan Ice has made this strain a favorite among hash producers and patients with severe symptoms.";
         String desc2 = "For those craving a cerebral buzz with a citrus kick, 3C Agent Tangie is perfect. The glittery colas are light green with a zesty, floral flavor. Its effects linger in the crown of the skull and disperse throughout the body in steady waves of invigoration. This strain may assist those suffering from perpetual procrastination, depression, and fatigue";
 
-        Strain s1 = new Strain("Alaskan Ice","sativa",f1, p1, n1, m1,"hybrid", 4.4,desc);
-        Strain s2 = new Strain("Agent Tangie","hybrid",f1, p1, n1, m1,"sativa", 4.5,desc2);
+        Strain s1 = new Strain("Alaskan Ice",123,f1, p1, n1, m1,"hybrid", 4.4,desc);
+        Strain s2 = new Strain("Agent Tangie",456,f1, p1, n1, m1,"sativa", 4.5,desc2);
 
         s1 = strainService.save(s1);
         s2 = strainService.save(s2);

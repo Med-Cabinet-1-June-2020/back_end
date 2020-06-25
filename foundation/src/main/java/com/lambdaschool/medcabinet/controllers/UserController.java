@@ -29,6 +29,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import javax.validation.Valid;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -324,5 +325,26 @@ public class UserController
         userService.save(user);
 
         return new ResponseEntity<>(HttpStatus.CREATED);
+    }
+
+    @DeleteMapping(value = "/user/{userid}/strains/remove/{strainid}")
+    public ResponseEntity<?> removeStrainFromUser(@PathVariable long strainid, @PathVariable long userid)
+    {
+        User user = userService.findUserById(userid);
+
+        Strain strain = strainService.findByStrainById(strainid);
+
+        Iterator<Strain> itr = user.getStrains().iterator();
+
+        while (itr.hasNext()) {
+            Strain str = itr.next();
+            if (str.equals(strain)) {
+                itr.remove();
+            }
+        }
+
+        userService.save(user);
+
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 }
