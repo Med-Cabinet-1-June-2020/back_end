@@ -121,6 +121,10 @@ Saving Recommendations to a User
 --------------------------------
 POST https://medcabinetjune2020.herokuapp.com/users/user/{userid}/strains/add/{strainid}
 
+Removing Recommendations to a User
+--------------------------------
+POST https://medcabinetjune2020.herokuapp.com/users/user/{userid}/strains/remove/{strainid}
+
 
 Getting all User Information
 ----------------------------
