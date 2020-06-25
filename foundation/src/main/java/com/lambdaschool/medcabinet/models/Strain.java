@@ -19,7 +19,7 @@ public class Strain extends Auditable{
     @Column(nullable = false, unique = true)
     private String strain;
 
-    private String race;
+    private long index;
 
     @ElementCollection
     @CollectionTable(name = "strainflavors", joinColumns = @JoinColumn(name = "strainid"))
@@ -55,9 +55,9 @@ public class Strain extends Auditable{
     public Strain() {
     }
 
-    public Strain(String strain, String race, Set<String> flavors, Set<String> positive, Set<String> negative, Set<String> medical, String type, double rating, String description) {
+    public Strain(String strain, long index, Set<String> flavors, Set<String> positive, Set<String> negative, Set<String> medical, String type, double rating, String description) {
         this.strain = strain;
-        this.race = race;
+        this.index = index;
         this.flavors = flavors;
         this.positive = positive;
         this.negative = negative;
@@ -81,14 +81,6 @@ public class Strain extends Auditable{
 
     public void setStrain(String strain) {
         this.strain = strain;
-    }
-
-    public String getRace() {
-        return race;
-    }
-
-    public void setRace(String race) {
-        this.race = race;
     }
 
     public Set<String> getFlavors() {
@@ -155,12 +147,19 @@ public class Strain extends Auditable{
         this.users = users;
     }
 
+    public long getIndex() {
+        return index;
+    }
+
+    public void setIndex(long index) {
+        this.index = index;
+    }
+
     @Override
     public String toString() {
         return "Strain{" +
                 "strainid=" + strainid +
                 ", strain='" + strain + '\'' +
-                ", race='" + race + '\'' +
                 ", flavors=" + flavors +
                 ", positive=" + positive +
                 ", negative=" + negative +

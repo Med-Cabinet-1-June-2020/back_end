@@ -30,7 +30,7 @@ public class StrainServiceImpl implements StrainService {
             Strain newStrain = new Strain();
 
             newStrain.setStrain(strain.getStrain());
-            newStrain.setRace(strain.getRace());
+            newStrain.setIndex(strain.getIndex());
             newStrain.setFlavors(strain.getFlavors());
             newStrain.setPositive(strain.getPositive());
             newStrain.setNegative(strain.getNegative());

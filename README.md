@@ -66,6 +66,22 @@ Send list of desired effects in JSON to:
 
 POST https://medcabinetjune2020.herokuapp.com/req/new
 
+Data send should look like below:
+```
+{
+    "medical": [
+        "alcholic",
+        "depressed",
+        "fat"
+    ],
+    "effects": [
+        "high",
+        "happy",
+        "creative"
+    ]
+}
+```
+
 Returns data in the following format
 ```
 {
@@ -103,7 +119,11 @@ Returns data in the following format
 
 Saving Recommendations to a User
 --------------------------------
-TBD
+POST https://medcabinetjune2020.herokuapp.com/users/user/{userid}/strains/add/{strainid}
+
+Removing Recommendations to a User
+--------------------------------
+POST https://medcabinetjune2020.herokuapp.com/users/user/{userid}/strains/remove/{strainid}
 
 
 Getting all User Information
